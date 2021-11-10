@@ -101,6 +101,9 @@ public class ForumarioComboBox extends javax.swing.JFrame {
             
             this.jLabel2.setText("Viña");
         }
+        else if (this.jComboBox1.getSelectedIndex()==2) {
+            this.jLabel2.setText("Valpo");
+        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
