@@ -31,18 +31,26 @@ public class ForumarioComboBox extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "Viña del Mar", "Valparaíso", "Quilpue" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Ciudad:");
 
         jButton1.setText("Salir");
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Enviar");
 
-        jButton3.setText("jButton3");
+        jButton3.setText("Limpiar");
+
+        jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -61,8 +69,11 @@ public class ForumarioComboBox extends javax.swing.JFrame {
                         .addGap(40, 40, 40)
                         .addComponent(jButton1)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                        .addComponent(jButton3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(jLabel2)))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,11 +87,21 @@ public class ForumarioComboBox extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addComponent(jLabel2)
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        
+        if (this.jComboBox1.getSelectedIndex()==1) {
+            
+            this.jLabel2.setText("Viña");
+        }
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -123,5 +144,6 @@ public class ForumarioComboBox extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
